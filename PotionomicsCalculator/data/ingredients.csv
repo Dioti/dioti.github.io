@@ -1,0 +1,4 @@
+NAME,A,B,C,D,E,TOTAL,TASTE,SENSATION,AROMA,VISUAL,SOUND,LOCATION,TYPE,RARITY,PRICE,PPM,ICON
+Fairy Flower Bulb,4,0,0,0,0,4,0,0,1,0,0,Enchanted Forest,Flower,Bronze,14,0.29,Fairy_Flower_Bulb.webp
+Impstool Mushroom,0,4,0,0,0,4,0,1,0,0,0,Enchanted Forest,Mushroom,Bronze,17,0.24,Impstool_Mushroom.webp
+River Calamari,8,0,0,0,0,8,0,-1,0,0,0,Enchanted Forest,Fish,Bronze,5,1.6,River_Calamari.webp
