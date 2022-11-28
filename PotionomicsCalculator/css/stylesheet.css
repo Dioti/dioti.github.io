@@ -1,0 +1,42 @@
+table {
+    border-collapse: collapse;
+    border: 2px solid black;
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+body {
+    font-family: 'Alice', serif;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.section {
+    background-color: lightgrey;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+#ingredientsTableSettings {
+    text-align: left;
+}
+
+#ingredientsTableSettings, #ingredientsTableSettings td {
+    border: none;
+}
+
+.ingredientsIcon {
+    width: 40px;
+    height: 40px;
+}
+
+#ingredientsTable {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
