@@ -7,59 +7,68 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/stylesheet.css">
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/papaparse@latest/papaparse.min.js"></script>
     <script src="js/sample.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
-    <h1>Potionomics Calculator</h1>
-    <div id="navbar">
-        <button type="button" id="settingsButton">Settings</button>
-        <button type="button" id="resultsButton">Results</button>
-    </div>
-    <div id="main">
-        <div id="settings">
-            <div id="ingredientsSettings" class="section">
-                <h2>Available Ingredients</h2>
-                <table id="ingredientsTableSettings">
-                    <tr>
-                        <td>Unlocked at Quinn</td>
-                        <td>
-                            <button type="button" id="quinnSelectAll" onclick="selectAll()">Select all</button>
-                            <button type="button" id="quinnDeselectAll" onclick="deselectAll()">Deselect all</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Quantity Owned</td>
-                        <td>
-                            <button type="button" id="quantityMax" onclick="setQuantityAll(99)">Set all to 99</button>
-                            <button type="button" id="quantityMin" onclick="setQuantityAll(0)">Set all to 0</button>
-                        </td>
-                    </tr>
-                </table>
-                <table id="ingredientsTable">
-                    <thead>
-                        <tr>
-                            <th colspan="2">Ingredient</th>
-                            <th>Unlocked at Quinn</th>
-                            <th>Quantity Owned</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- populate -->
-                    </tbody>
-                </table>
-                <div id="ingredientsSaveLoad">
-                    <button type="button" id="saveIngredients">Save Ingredients</button>
-                    <button type="button" id="loadIngredients">Load Ingredients</button>
-                </div>
-            </div>
-            <div id="calculatorSettings" class="section">
-                <h2>Calculator Settings</h2>
-
-            </div>
+<h1>Potionomics Calculator</h1>
+<div id="navbar">
+    <input type="radio" class="sectionButton" id="ingredientsButton" name="sectionOption" value="ingredients" checked>
+    <label for="ingredientsButton">Ingredients</label>
+    <input type="radio" class="sectionButton" id="settingsButton" name="sectionOption" value="settings">
+    <label for="settingsButton">Settings</label>
+    <input type="radio" class="sectionButton" id="resultsButton" name="sectionOption" value="results">
+    <label for="resultsButton">Results</label>
+</div>
+<div id="main">
+    <div id="ingredientsSection" class="section">
+        <h2>Available Ingredients</h2>
+        <table id="ingredientsTableSettings">
+            <tr>
+                <td>Unlocked at Quinn</td>
+                <td>
+                    <button type="button" id="quinnTickAll" onclick="tickAll()">Tick all</button>
+                    <button type="button" id="quinnUntickAll" onclick="untickAll()">Untick all</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Quantity Owned</td>
+                <td>
+                    <button type="button" id="quantityMin" onclick="setQuantityAll(0)">Set all to 0</button>
+                    <button type="button" id="quantityMax" onclick="setQuantityAll(99)">Set all to 99</button>
+                </td>
+            </tr>
+        </table>
+        <table id="ingredientsTable">
+            <thead>
+            <tr>
+                <th colspan="2">Ingredient</th>
+                <th>Unlocked at Quinn</th>
+                <th>Quantity Owned</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- populate table -->
+            </tbody>
+        </table>
+        <div id="ingredientsSaveLoad">
+            <button type="button" id="saveIngredients" onclick="saveIngredients()">Save Ingredients</button>
+            <button type="button" id="loadIngredients" onclick="loadIngredients()">Load Ingredients</button>
+            <div id="saveLoadMessage"></div>
         </div>
     </div>
+    <div id="settingsSection" class="section">
+        <h2>Calculator Settings</h2>
+<!--        <div class="box" id="ingredientsBox"></div>-->
+<!--        <div class="box" id="settingsBox"></div>-->
+<!--        <div class="box" id="resultsBox"></div>-->
+    </div>
+    <div id="resultsSection" class="section">
+        <h2>Results</h2>
+    </div>
+</div>
 </body>
 </html>
